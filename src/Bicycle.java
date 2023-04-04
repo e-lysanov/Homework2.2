@@ -4,7 +4,11 @@ public class Bicycle extends Transport {
         super(modelName, wheelsCount);
     }
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    @Override
+    public void check(Transport transport) {
+        System.out.println("Обслуживаем " + transport.getModelName());
+        for (int i = 0; i < transport.getWheelsCount(); i++) {
+            transport.updateTyre();
+        }
     }
 }

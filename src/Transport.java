@@ -1,4 +1,4 @@
-public class Transport {
+public abstract class Transport {
     protected String modelName;
     protected int wheelsCount;
 
@@ -14,5 +14,20 @@ public class Transport {
 
     public int getWheelsCount() {
         return wheelsCount;
+    }
+
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
+
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель");
+    }
+
+    public void checkTrailer() {
+        System.out.println("Проверяем прицеп");
+    }
+
+    public void check(Transport transport) {
     }
 }
